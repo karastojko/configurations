@@ -1,1 +1,4 @@
-# configurations
+
+# configurations #
+
+Settings for various stuff.
