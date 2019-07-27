@@ -5,14 +5,24 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+; window split policy
+(setq split-height-threshold 80)
+(setq split-width-threshold 240)
+(setq-default truncate-lines t)
 (load-theme 'deeper-blue)
-(tabbar-mode 1)
+; (tabbar-mode 1)
 (desktop-save-mode 1)
 (setq column-number-mode t)
 (show-paren-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
+(ido-mode t)
 (setq tramp-default-method "ssh")
+
+(defun my-c++-mode-hook ()
+    (setq c-basic-offset 4)
+    (c-set-offset 'substatement-open 0))
+(add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 (setq sgml-basic-offset 4)
 
@@ -23,10 +33,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (js2-mode))))
+ '(package-selected-packages (quote (magit js2-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(require 'package)
+(add-to-list 'package-archives
+    '("melpa" . "http://melpa.org/packages/") t)
