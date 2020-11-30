@@ -20,6 +20,9 @@
 (ido-mode t)
 (setq tramp-default-method "ssh")
 
+(global-hl-line-mode 1)
+(set-face-background hl-line-face "#222222")
+
 (defun my-c++-mode-hook ()
     (setq c-basic-offset 4)
     (c-set-offset 'substatement-open 0))
