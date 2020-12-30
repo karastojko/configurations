@@ -23,6 +23,8 @@
 (global-hl-line-mode 1)
 (set-face-background hl-line-face "#222222")
 
+(setq ediff-split-window-function 'split-window-horizontally)
+
 (defun my-c++-mode-hook ()
     (setq c-basic-offset 4)
     (c-set-offset 'substatement-open 0))
@@ -43,7 +45,7 @@
     ;; Your init file should contain only one such instance.
     ;; If there is more than one, they won't work right.
     '(json-mode-indent-level 4)
-    '(js2-basic-offset 2)
+    '(js2-basic-offset 4)
     '(js2-bounce-indent-p t)
     '(package-selected-packages (quote (json-mode markdown-mode magit js2-mode))))
 
