@@ -49,6 +49,8 @@
     '(js2-bounce-indent-p t)
     '(package-selected-packages (quote (json-mode markdown-mode magit js2-mode))))
 
+(setq web-mode-script-padding 4)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
