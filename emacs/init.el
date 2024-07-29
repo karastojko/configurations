@@ -61,4 +61,7 @@
 (require 'package)
 (add-to-list 'package-archives
     '("melpa" . "http://melpa.org/packages/") t)
- 
+
+(defun dos2unix ()
+    (interactive)
+    (set-buffer-file-coding-system 'unix 't) )
