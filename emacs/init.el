@@ -65,3 +65,5 @@
 (defun dos2unix ()
     (interactive)
     (set-buffer-file-coding-system 'unix 't) )
+
+(add-to-list 'auto-mode-alist '("\\.csproj\\'" . xml-mode))
