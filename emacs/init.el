@@ -68,3 +68,5 @@
 
 (add-to-list 'auto-mode-alist '("\\.csproj\\'" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.cshtml\\'" . csharp-mode))
+
+(define-key org-mode-map (kbd "C-c C-x t") 'org-toggle-link-display)
