@@ -37,19 +37,20 @@
         (make-local-variable 'js-indent-level)
         (setq js-indent-level 4)))
 
-; javascript
-(setq js2-basic-offset 4)
+(defun my-web-mode-hook ()
+    (setq web-mode-markup-indent-offset 2))
+    (setq web-mode-code-indent-offset 4)
+(add-hook 'web-mode-hook 'my-web-mode-hook)
+
 (custom-set-variables
     ;; custom-set-variables was added by Custom.
     ;; If you edit it by hand, you could mess it up, so be careful.
     ;; Your init file should contain only one such instance.
     ;; If there is more than one, they won't work right.
+    '(auth-source-save-behavior nil)
     '(json-mode-indent-level 4)
-    '(js2-basic-offset 4)
-    '(js2-bounce-indent-p t)
-    '(package-selected-packages (quote (json-mode markdown-mode magit js2-mode))))
-
-(setq web-mode-script-padding 4)
+    '(package-selected-packages
+        '(typescript-mode csharp-mode raku-mode web-mode json-mode markdown-mode magit)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
